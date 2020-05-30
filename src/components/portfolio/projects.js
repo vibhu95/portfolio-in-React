@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {Button, Card, CardActions, CardMenu, CardText, CardTitle, Cell, Grid, IconButton, Tab, Tabs} from "react-mdl";
+import ProjectCard from './projectCard';
 
 class Project extends Component{
 
@@ -8,78 +9,84 @@ class Project extends Component{
         this.state = {activeTab: 0};
     }
 
-    toggleCategories(){
-        if (this.state.activeTab === 0){
-            return(
-                <div className="projects-grid">
-                    {/*// Project #1*/}
-                    <Card shadow={5} style={{minWidth:'450', margin:'auto'}}>
-                        <CardTitle style={{color:'#fff', height:'176px', background: 'url(https://cdn.iconscout.com/icon/free/png-512/react-1-282599.png) center/cover'}}>React Project #1</CardTitle>
-                        <CardText>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                        </CardText>
-                        <CardActions border>
-                            <Button colored>GitHub</Button>
-                            <Button colored>CodePen</Button>
-                            <Button colored>LiveDemo</Button>
-                        </CardActions>
-                        <CardMenu style={{color:'#fff'}}>
-                            <IconButton name="share" />
-                        </CardMenu>
-                    </Card>
-                    {/*// Project #2*/}
-                    <Card shadow={5} style={{minWidth:'450', margin:'auto'}}>
-                        <CardTitle style={{color:'#fff', height:'176px', background: 'url(https://cdn.iconscout.com/icon/free/png-512/react-1-282599.png) center/cover'}}>React Project #2</CardTitle>
-                        <CardText>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                        </CardText>
-                        <CardActions border>
-                            <Button colored>GitHub</Button>
-                            <Button colored>CodePen</Button>
-                            <Button colored>LiveDemo</Button>
-                        </CardActions>
-                        <CardMenu style={{color:'#fff'}}>
-                            <IconButton name="share" />
-                        </CardMenu>
-                    </Card>
-                    {/*// Project #3*/}
-                    <Card shadow={5} style={{minWidth:'450', margin:'auto'}}>
-                        <CardTitle style={{color:'#fff', height:'176px', background: 'url(https://cdn.iconscout.com/icon/free/png-512/react-1-282599.png) center/cover'}}>React Project #3</CardTitle>
-                        <CardText>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                        </CardText>
-                        <CardActions border>
-                            <Button colored>GitHub</Button>
-                            <Button colored>CodePen</Button>
-                            <Button colored>LiveDemo</Button>
-                        </CardActions>
-                        <CardMenu style={{color:'#fff'}}>
-                            <IconButton name="share" />
-                        </CardMenu>
-                    </Card>
-                </div>
-            )
-        }else if (this.state.activeTab === 1){
-            return (
-                <div><h1>This is Angular</h1></div>
-            )
-        }else if (this.state.activeTab === 2){
-            return (
-                <div><h1>This is Java</h1></div>
-            )
-        }else if (this.state.activeTab === 3){
-            return (
-                <div><h1>This is NodeJS</h1></div>
-            )
+    projects = {
+        "0": {
+            name:"Java",
+            items:[{
+                title:"New Safar",
+                bgUrl:"https://www.gstatic.com/flights/app/illustration-flights-desktop.png",
+                description:"New Safar is a Travel Portal where you can book flights/Hotel/Bus. I have done all the Backend part as well as DevOps part to make the portal live along with complete security.",
+                guthub:"",
+                liveDemo:"https://newsafar.com/"
+            },{
+                title:"e-Sushrut",
+                bgUrl:"https://images.vexels.com/media/users/3/166401/isolated/preview/b82aa7ac3f736dd78570dd3fa3fa9e24-java-programming-language-icon-by-vexels.png",
+                description:"e-Sushrut C-DAC’s Hospital Management Information System is a major step towards adapting technology to improve healthcare system. I have contributed as Fullstack Developer in this project, build complete Doctor Desk Design using HTML5, CSS3, Bootstrap, JS, jQuery, AJAX, and also rebuild all the core UI components of this project to ensure the responsiveness. Alongside I have also build related restfull API's for that.",
+                guthub:"",
+                liveDemo:"https://www.cdac.in/index.aspx?id=hi_his_noida_130318_sushrut"
+            },{
+                title:"MatchFinder",
+                bgUrl:"https://images.vexels.com/media/users/3/166401/isolated/preview/b82aa7ac3f736dd78570dd3fa3fa9e24-java-programming-language-icon-by-vexels.png",
+                description:"The idea was to provide a common platform for all the marriage agents to use each other's data without sharing complete data by just subscribing to MatchFinder with anyone suitable plans. We have done GeoMapping of the agent's location as well as the covered area by him to ensure maximum clarity to our consumers. Tech stack used J2EE, Spring, MySQL, HTML, CSS, Bootstrap, jQuery, JS, Google Map API, Mail Services, PayUmoney Payment Gateway.",
+                guthub:"https://github.com/vibhu95/MatchFinder",
+                liveDemo:""
+            },{
+                title:"DacorPrint",
+                bgUrl:"https://images.vexels.com/media/users/3/166401/isolated/preview/b82aa7ac3f736dd78570dd3fa3fa9e24-java-programming-language-icon-by-vexels.png",
+                description:"The idea was to design an e-Commerce portal to where you can get printed your own design on any product available on the portal. Tech stack used are Java, Servlets, MySQL, HTML, CSS, Bootstrap, jQuery, JS",
+                guthub:"",
+                liveDemo:""
+            }]
+        },
+        "1": {
+            name:"ReactJs",
+            items:[{
+                title:"Portfolio",
+                bgUrl:"https://vibhuti.netlify.app/portfolio_icon.png",
+                description:"Web portal for my portfolio. I have used almost all basic functionalities of ReactJS to complete this project like Components, React Router, Properties, State Management, Hooks API and even I am builing a flow for to utilize Redux, Ajax.",
+                guthub:"https://github.com/vibhu95/portfolio-in-React",
+                liveDemo:"https://vibhuti.netlify.app"
+            }]
+        },
+        "2": {
+            name:"NodeJs",
+            items:[{
+                title:"ERP Solution",
+                bgUrl:"https://scotch-res.cloudinary.com/image/upload/w_1050,q_auto:good,f_auto/v1566664762/ukalsvubeuwog27fzguz.jpg",
+                description:"The aim was to provide few forms where user can add someone, login aside as well as view the details of all users and also can fill a form to get mail of contact. I complete this project to perform CRUD operations using NodeJS,ExpressJS and MongoDB.",
+                guthub:"https://github.com/vibhu95/ExpressjsWithMongoDB",
+                liveDemo:"https://expressjswithmongo.herokuapp.com"
+            },{
+                title:"Jarvis",
+                bgUrl:"https://imageog.flaticon.com/icons/png/512/919/919825.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF",
+                description:"I have build my ChatBot Jarvis using Dialogflow and as well as build a server on NodeJS to expose Webhooks for Dialogflow service. The aim was to perform few operations using my Bot, who can send someone immediate mail and even I can maintain my notes by just asking my Bot.",
+                guthub:"https://github.com/vibhu95/dialogWebhook",
+                liveDemo:"https://echojarvise.herokuapp.com/"
+            }]
         }
+    }
+
+    toggleCategories(){
+        let Items = this.projects[this.state.activeTab].items.map(i=>{
+            return <ProjectCard title={i.title} 
+                    bgUrl={i.bgUrl}
+                    description={i.description}
+                    github={i.guthub}
+                    liveDemo={i.liveDemo} />
+         });        
+        return(
+            <div className="projects-grid">
+                {Items}
+            </div>
+        )
     }
 
     render() {
         return(
             <div className="category-tabs">
-                {/* <Tabs activeTab={this.state.activeTab} onChange={(tabId) => this.setState({activeTab: tabId})} ripple>
-                    <Tab>React</Tab>
+                <Tabs activeTab={this.state.activeTab} onChange={(tabId) => this.setState({activeTab: tabId})} ripple>
                     <Tab>Java</Tab>
+                    <Tab>ReactJS</Tab>
                     <Tab>NodeJS</Tab>
                 </Tabs>
 
@@ -87,7 +94,7 @@ class Project extends Component{
                     <Cell col={12}>
                         <div className="content">{this.toggleCategories()}</div>
                     </Cell>
-                </Grid> */}
+                </Grid>
             </div>
         );
     }

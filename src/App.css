@@ -156,3 +156,16 @@
   opacity: .3;
   transition: 0s;
 }
+
+.cardLink{
+  text-decoration: none;
+  padding: 7px 15px;
+  margin: 15px 10px;
+  color: grey;
+
+}
+
+.cardLink:hover{
+  color: #000000b0;
+  background-color: #8080803b;
+}
