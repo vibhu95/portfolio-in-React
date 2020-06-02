@@ -90,14 +90,14 @@ class Resume extends Component{
                             endYear={2017}
                             course={"Graduated in Computer Science Engineering"}
                             schoolName={"VBSPU"}
-                            schoolDescription={"Graduated with First Devision. This is a four year graduation programme organized by VBSPU, State University"}
+                            schoolDescription={"Graduated with First Division. This is a four-year graduation program organized by VBSPU, State University"}
                         />
                         <Education
                             startYear={2017}
                             endYear={2018}
                             course={"Post Graduated in Advance Computing"}
                             schoolName={"CDAC"}
-                            schoolDescription={"Six Months short term course offered by one of the most prestigious organization of India. C++, Data Structure, Software Engineering, Operating System, Java, Database, Computer Networks, Parallel Computing"}
+                            schoolDescription={"Six Months short term course offered by one of the most prestigious organizations of India. C++, Data Structure, Software Engineering, Operating System, Java, Database, Computer Networks, Parallel Computing"}
                         />
                         <hr style={{borderTop:'3px solid #e22947'}} />
                         <h2>Experience</h2>
