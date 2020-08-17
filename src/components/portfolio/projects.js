@@ -46,6 +46,12 @@ class Project extends Component{
                 description:"Web portal for my portfolio. I have used almost all basic functionalities of ReactJS to complete this project like Components, React Router, Properties, State Management, Hooks API and even I am builing a flow for to utilize Redux, Ajax.",
                 guthub:"https://github.com/vibhu95/portfolio-in-React",
                 liveDemo:"https://vibhuti.netlify.app"
+            },{
+                title:"NyasAshram",
+                bgUrl:"https://www.lokkalyanpeeth.in/static/media/logo.95792ce8.png",
+                description:"Lok Kalyanpeetham Nyas Ashram Web portal. I have used almost all basic functionalities of ReactJS to complete this project like Components, React Router, Properties, Hooks API.",
+                guthub:"",
+                liveDemo:"https://www.lokkalyanpeeth.in/"
             }]
         },
         "2": {

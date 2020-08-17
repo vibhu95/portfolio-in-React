@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {Cell, Grid, List, ListItem, ListItemContent} from "react-mdl";
+import imageSelf from '../../assets/self.jpeg';
 
 class Contact extends Component{
     render() {
@@ -9,7 +10,7 @@ class Contact extends Component{
                     <Cell col={6}>
                         <h3 style={{fontWeight:'400'}}>Vibhuti Narayan</h3>
                         <img
-                            src="https://media-exp1.licdn.com/dms/image/C5103AQG6u3k9rypkvQ/profile-displayphoto-shrink_200_200/0?e=1594857600&amp;v=beta&amp;t=wxyhI0aGP_GJAHTI5OLysKIo0ZbPqBMwYgI10_FMJV8"
+                            src={imageSelf}
                             alt="avatar"
                             style={{height:'200px', borderRadius:'20px'}}
                         />

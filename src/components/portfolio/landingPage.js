@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {Cell, Grid} from "react-mdl";
 import resumeSinglePager from '../../assets/Vibhuti-Narayan-Resume_SinglePage.pdf';
 import resumeMultiPager from '../../assets/Vibhuti-Narayan-Resume_Multipage.pdf';
+import imageSelf from '../../assets/self.jpeg';
 
 class Landing extends Component{
     render() {
@@ -10,7 +11,7 @@ class Landing extends Component{
                 <Grid className="landing-grid">
                     <Cell col={12}>
                         <img
-                            src="https://media-exp1.licdn.com/dms/image/C5103AQG6u3k9rypkvQ/profile-displayphoto-shrink_200_200/0?e=1594857600&v=beta&t=wxyhI0aGP_GJAHTI5OLysKIo0ZbPqBMwYgI10_FMJV8"
+                            src={imageSelf}
                             alt="avatar"
                             className="avatar-img"
                         />

@@ -4,6 +4,7 @@ import Education from "./education";
 import Experience from "./experience";
 import Skills from "./skills";
 import ResumeSinglePage from '../../assets/Vibhuti-Narayan-Resume_SinglePage.pdf';
+import imageSelf from '../../assets/self.jpeg';
 
 class Resume extends Component{
     render() {
@@ -15,7 +16,7 @@ class Resume extends Component{
                     <Cell col={4}>
                         <div style={{textAlign:'center'}}>
                             <img
-                                src="https://media-exp1.licdn.com/dms/image/C5103AQG6u3k9rypkvQ/profile-displayphoto-shrink_200_200/0?e=1594857600&v=beta&t=wxyhI0aGP_GJAHTI5OLysKIo0ZbPqBMwYgI10_FMJV8"
+                                src={imageSelf}
                                 alt="avatar"
                                 style={{height:'200px', borderRadius:'50%'}}
                             />
