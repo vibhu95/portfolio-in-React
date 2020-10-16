@@ -11,7 +11,7 @@ class Landing extends Component{
                 <Grid className="landing-grid">
                     <Cell col={12}>
                         <img
-                            src={imageSelf}
+                            src={'https://avatars0.githubusercontent.com/u/33080917?s=460&u=770136ab562ae895f95d59f5d8bdb5e5270ab51f&v=4'}
                             alt="avatar"
                             className="avatar-img"
                         />
