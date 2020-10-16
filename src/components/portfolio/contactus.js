@@ -10,7 +10,7 @@ class Contact extends Component{
                     <Cell col={6}>
                         <h3 style={{fontWeight:'400'}}>Vibhuti Narayan</h3>
                         <img
-                            src={imageSelf}
+                            src={'https://avatars0.githubusercontent.com/u/33080917?s=460&u=770136ab562ae895f95d59f5d8bdb5e5270ab51f&v=4'}
                             alt="avatar"
                             style={{height:'200px', borderRadius:'20px'}}
                         />
